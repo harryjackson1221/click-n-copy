@@ -19,7 +19,7 @@ wp_enqueue_script('clipboardjs');
 //lets add a shortcode to echo and copy the content tag in a shortcode
 add_shortcode('c2c', 'Click2Copy');
 
-//Set the function to allow for the shortcode
+//Set the function to allow for the shortcode, need to replace htmlspecialchars with something that works on single and double quotes inside "", currently have to set copytext with single quotes, and can only use double in code
 function Click2Copy($atts, $content) {
 $escaped_copytext = htmlspecialchars( $atts[ 'copytext' ] );
 return '<pre>' . $escaped_copytext . '</pre><br/><button id="' . $atts['id'] . '" class="' . $atts['class'] . '" data-clipboard-text="' . $escaped_copytext . '">
@@ -35,6 +35,7 @@ return '<pre>' . $escaped_copytext . '</pre><br/><button id="' . $atts['id'] . '
     });
     </script>';
 }
+
 
 
 
