@@ -24,6 +24,16 @@ function Click2Copy($atts, $content) {
  return'<button id="' . $atts['id'] . '" class="' . $atts['class'] . '" data-clipboard-text="' . $atts['content'] . '">
     ' . $atts['button-text'] . '
 </button>'
+    <script>
+    var btn = document.getElementById(\'' . $atts['id'] . '\');
+    var clipboard = new Clipboard(code1);
+    clipboard.on(\'success\', function(e) {
+        console.log(e);
+    });
+    clipboard.on(\'error\', function(e) {
+        console.log(e);
+    });
+    </script>;
 }
 
 //usage
