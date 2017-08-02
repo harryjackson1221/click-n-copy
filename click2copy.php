@@ -13,15 +13,26 @@
 // Protections
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
+remove_filter('the_content', 'wpautop');
+
 wp_register_script( 'clipboardjs', 'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js' );
 wp_enqueue_script('clipboardjs');
 
 //lets add a shortcode to echo and copy the content tag in a shortcode
 add_shortcode('c2c', 'Click2Copy');
 
-//Set the function to allow for the shortcode, need to replace htmlspecialchars with something that works on single and double quotes inside "", currently have to set copytext with single quotes, and can only use double in code
+//Set the function to allow for the shortcode
 function Click2Copy($atts, $content) {
-$escaped_copytext = htmlspecialchars( $atts[ 'copytext' ] );
+echo "<pre>\n";
+echo "attr: [";
+print_r($atts);
+echo "]\n";
+echo "content: [";
+print_r($content);
+echo "]";
+echo "</pre>\n";
+//$escaped_copytext = htmlspecialchars( $content );
+$escaped_copytext = htmlspecialchars( $content );
 return '<pre>' . $escaped_copytext . '</pre><br/><button id="' . $atts['id'] . '" class="' . $atts['class'] . '" data-clipboard-text="' . $escaped_copytext . '">
     ' . $atts['button-text'] . '
 </button>
