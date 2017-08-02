@@ -9,3 +9,22 @@
    License: GPL2
    */
 ?>
+
+// Protections
+defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
+
+//enqueue clipboard.js
+wp_enqueue_script( 'clipboardjs', get_stylesheet_directory_uri() . 'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js',false,'1.7.1','all');
+
+//lets add a shortcode to echo and copy the content tag in a shortcode
+add_shortcode('c2c', 'Click2Copy');
+
+//Set the function to allow for the shortcode
+function Click2Copy($atts, $content) {
+ return'<button id="' . $atts['id'] . '" class="' . $atts['class'] . '" data-clipboard-text="' . $atts['content'] . '">
+    ' . $atts['button-text'] . '
+</button>'
+}
+
+//usage
+//[c2c id="code1" class="css-custom-class" content="testing"]
