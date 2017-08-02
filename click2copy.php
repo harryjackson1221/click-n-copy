@@ -8,33 +8,35 @@
    Author URI: http://harryj.us
    License: GPL2
    */
-?>
+
 
 // Protections
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
-//enqueue clipboard.js
-wp_enqueue_script( 'clipboardjs', get_stylesheet_directory_uri() . 'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js',false,'1.7.1','all');
+wp_register_script( 'clipboardjs', 'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js' );
+wp_enqueue_script('clipboardjs');
 
 //lets add a shortcode to echo and copy the content tag in a shortcode
 add_shortcode('c2c', 'Click2Copy');
 
 //Set the function to allow for the shortcode
 function Click2Copy($atts, $content) {
- return'<button id="' . $atts['id'] . '" class="' . $atts['class'] . '" data-clipboard-text="' . $atts['content'] . '">
+$escaped_copytext = htmlspecialchars( $atts[ 'copytext' ] );
+return '<pre>' . $escaped_copytext . '</pre><br/><button id="' . $atts['id'] . '" class="' . $atts['class'] . '" data-clipboard-text="' . $escaped_copytext . '">
     ' . $atts['button-text'] . '
-</button>'
+</button>
     <script>
-    var btn = document.getElementById(\'' . $atts['id'] . '\');
-    var clipboard = new Clipboard(code1);
-    clipboard.on(\'success\', function(e) {
+    var clipboard = new Clipboard(' . $atts['id'] . ');
+    clipboard.on("success", function(e) {
         console.log(e);
     });
-    clipboard.on(\'error\', function(e) {
+    clipboard.on("error", function(e) {
         console.log(e);
     });
-    </script>;
+    </script>';
 }
+
+
 
 //usage
 //[c2c id="code1" class="css-custom-class" content="testing"]
