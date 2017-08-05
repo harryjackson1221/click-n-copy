@@ -15,40 +15,40 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
 remove_filter('the_content', 'wpautop');
 
-wp_register_script( 'clipboardjs', 'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js' );
+wp_register_script( 'clipboardjs', 'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js' , array() , '1.7' );
 wp_enqueue_script('clipboardjs');
+wp_register_script('copyjs', plugins_url('/js/copy.js', __FILE__), false, '1.0', 'all');
+wp_enqueue_script( 'copyjs');
 
 //lets add a shortcode to echo and copy the content tag in a shortcode
 add_shortcode('c2c', 'Click2Copy');
 
 //Set the function to allow for the shortcode
 function Click2Copy($atts, $content) {
-echo "<pre>\n";
-echo "attr: [";
-print_r($atts);
-echo "]\n";
-echo "content: [";
-print_r($content);
-echo "]";
-echo "</pre>\n";
-//$escaped_copytext = htmlspecialchars( $content );
-$escaped_copytext = htmlspecialchars( $content );
-return '<pre>' . $escaped_copytext . '</pre><br/><button id="' . $atts['id'] . '" class="' . $atts['class'] . '" data-clipboard-text="' . $escaped_copytext . '">
+//echo "<pre>\n";
+//echo "attr: [";
+//print_r($atts);
+//echo "]\n";
+//echo "content: [";
+//print_r($content);
+//echo "]";
+//echo "</pre>\n";
+//$escaped_copytext = htmlEntities( $content , ENT_NOQUOTES , ENT_HTML5 );
+$escaped_copytext = htmlentities( $content );
+$unescaped_copytext = html_entity_decode( $escaped_copytext );
+return '<pre id="' . $atts['id'] . '">' . $escaped_copytext . '</pre><br/><center><button style="text-align: center;" class="btn ' . $atts['class'] . '" data-clipboard-text="' . $unescaped_copytext . '">
     ' . $atts['button-text'] . '
-</button>
-    <script>
-    var clipboard = new Clipboard(' . $atts['id'] . ');
-    clipboard.on("success", function(e) {
-        console.log(e);
-    });
-    clipboard.on("error", function(e) {
-        console.log(e);
-    });
-    </script>';
+</button></center>';
 }
 
 
-
-
 //usage
-//[c2c id="code1" class="css-custom-class" content="testing"]
+//[c2c id="code1" class="btn" button-text="Copy"]
+//a href="//link.com">link</a>
+//<a href="//link.com">link</a>
+//I can output HTML here and CSS
+//#rule {
+//color:#333;
+//}
+//[/c2c]
+
