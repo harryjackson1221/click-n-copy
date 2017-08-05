@@ -36,7 +36,7 @@ function Click2Copy($atts, $content) {
 //$escaped_copytext = htmlEntities( $content , ENT_NOQUOTES , ENT_HTML5 );
 $escaped_copytext = htmlentities( $content );
 $unescaped_copytext = html_entity_decode( $escaped_copytext );
-return '<pre id="' . $atts['id'] . '">' . $escaped_copytext . '</pre><br/><center><button style="text-align: center;" class="btn ' . $atts['class'] . '" data-clipboard-text="' . $unescaped_copytext . '">
+return '<pre id="' . $atts['id'] . '">' . $escaped_copytext . '</pre><br/><center><button style="text-align: center;" class="btn ' . $atts['class'] . '" data-clipboard-target="pre#' . $atts['id'] . '">
     ' . $atts['button-text'] . '
 </button></center>';
 }
