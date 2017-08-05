@@ -19,7 +19,8 @@ wp_register_script( 'clipboardjs', 'https://cdnjs.cloudflare.com/ajax/libs/clipb
 wp_enqueue_script('clipboardjs');
 wp_register_script('copyjs', plugins_url('/js/copy.js', __FILE__), false, '1.0', 'all');
 wp_enqueue_script( 'copyjs');
-
+wp_register_style('click2copy', plugins_url('/css/copy.css', __FILE__), false, '1.0', 'all');
+wp_enqueue_style( 'click2copy');
 //lets add a shortcode to echo and copy the content tag in a shortcode
 add_shortcode('c2c', 'Click2Copy');
 
@@ -41,15 +42,3 @@ return '<pre id="' . $atts['id'] . '" class="' . $atts['pclass'] . '">' . $escap
     ' . $atts['button-text'] . '
 </button></center>';
 }
-
-
-//usage - the text between [] [/] is the content that will be copied
-//[c2c id="code1" pre-class="" button-class="btn" button-text="Copy"]
-//a href="//link.com">link</a>
-//<a href="//link.com">link</a>
-//I can output HTML here and CSS
-//#rule {
-//color:#333;
-//}
-//[/c2c]
-
