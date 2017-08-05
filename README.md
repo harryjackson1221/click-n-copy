@@ -1,4 +1,4 @@
-# click-n-copy
+# Click2Copy
 Basic WordPress Shortcode Plugin to use clipboard.js for copying content
 
 
