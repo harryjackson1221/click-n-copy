@@ -6,12 +6,12 @@ Basic [WordPress](https://wordpress.org/) [Shortcode](https://codex.wordpress.or
 
 ## Prerequisites
 
-[WordPress](https://wordpress.org/) should be installed on your website, then you can grab the latest copy from [our release page](https://linkcomingso.on)
+[WordPress](https://wordpress.org/) should be installed on your website, then you can grab the latest copy from [our GitHub release page](https://github.com/harryjackson1221/click2copy/releases/)
 
 
 ## Installing
 
-Download the [our release page](https://linkcomingso.on)
+Download the [latest release](https://github.com/harryjackson1221/click2copy/releases/)
 
 Install the plugin using the [following guide](https://codex.wordpress.org/Managing_Plugins#Manual_Plugin_Installation) for installing a WordPress plugin manually.
 
