@@ -1,8 +1,11 @@
 # Click2Copy
-Basic WordPress Shortcode Plugin to use clipboard.js for copying content
+Basic WordPress Shortcode Plugin to use clipboard.js for copying content, such as HTML and CSS code snippets with the click of a button
+
+##Screenshot
 
 
-##Usage
+
+## Usage
 ```
 [c2c id="code1" pclass="pre2" bclass="btn" button-text="Copy"]
 <div class="row">
