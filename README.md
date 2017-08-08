@@ -18,7 +18,15 @@ Install the plugin using the [following guide](https://codex.wordpress.org/Manag
 Activate the plugin
 
 ## Usage
+The shortcode can be applied in either the Page or Post Editor using the following syntax: [c2c]content[/c2c]
 
+The options are as follows
+**id:** This identifies the code being copied, and only needs to be used if you have more than one instance on the page/post
+**pclass:** This applies a custom class to the <pre> tag for styling purposes
+**bclass:** This applies a custom CSS class to the <button> tag for styling purposes
+**button-text:** This allows you to set what the button says
+
+### *Example Use*
 ```
 [c2c id="code1" pclass="pre2" bclass="btn" button-text="Copy"]
 <div class="row">
@@ -31,7 +39,6 @@ It uses distinct styling to set it apart from other content on the page
 </div>
 [/c2c]
 ```
-
 
 # Built With
 * [clipboard.js](https://clipboardjs.com) The Javascript Library
