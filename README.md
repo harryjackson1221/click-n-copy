@@ -21,10 +21,10 @@ Activate the plugin
 The shortcode can be applied in either the Page or Post Editor using the following syntax: [c2c]content[/c2c]
 
 The options are as follows
-**id:** This identifies the code being copied, and only needs to be used if you have more than one instance on the page/post
-**pclass:** This applies a custom class to the `<pre>` HTML tag for styling purposes
-**bclass:** This applies a custom CSS class to the `<button>` HTML tag for styling purposes
-**button-text:** This allows you to set the button text
+* **id:** This identifies the code being copied, and only needs to be used if you have more than one instance on the page/post
+* **pclass:** This applies a custom class to the `<pre>` HTML tag for styling purposes
+* **bclass:** This applies a custom CSS class to the `<button>` HTML tag for styling purposes
+* **button-text:** This allows you to set the button text
 
 ### *Example Use*
 ```
