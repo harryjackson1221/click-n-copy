@@ -41,7 +41,7 @@ It uses distinct styling to set it apart from other content on the page
 ```
 
 # Built With
-* [clipboard.js](https://clipboardjs.com) The Javascript Library
+* [clipboard.js](https://clipboardjs.com) - The Javascript Library
 * [PHP](http://php.net/) - The Language
 * [WordPress](https://wp.org/) - The CMS
 * [HarryJ.us](http://harryj.us/) - The Person
