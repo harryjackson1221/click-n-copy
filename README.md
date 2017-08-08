@@ -1,5 +1,5 @@
 # Click2Copy
-Basic WordPress Shortcode Plugin to use clipboard.js for copying content, such as HTML and CSS code snippets with the click of a button
+Basic WordPress Shortcode Plugin to use [clipboard.js](https://clipboardjs.com) for copying content, such as HTML and CSS code snippets with the click of a button
 
 ## Screenshot
 ![ScreenShot](/screenshot.png?raw=true "ScreenShot")
