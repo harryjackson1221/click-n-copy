@@ -5,9 +5,9 @@ Basic WordPress Shortcode Plugin to use [clipboard.js](https://clipboardjs.com) 
 ![ScreenShot](/screenshot.png?raw=true "ScreenShot")
 
 ## Prerequisites
-```
-WordPress should be installed, then you can grab the latest copy from [our release page](https://linkcomingso.on)
-```
+
+[WordPress](https://wordpress.org/) should be installed on your website, then you can grab the latest copy from [our release page](https://linkcomingso.on)
+
 
 ## Installing
 
