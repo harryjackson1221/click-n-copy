@@ -40,10 +40,10 @@ function my_plugin_options() {
         echo '</div>';
 }
 
-add_action('admin_footer', 'my_admin_footer_function', '1');
-function my_admin_footer_function() {
-        echo '<p class="footer-center" style="text-align:center;">This will be inserted at the bottom of admin page</p>';
+function append2_footer_admin () {
+echo '<i class="footer-custom">| Made awesome by <a href="//harryj.us" target="_blank">Harry</a>.</i>';
 }
+add_filter('admin_footer_text', 'append2_footer_admin');
 
 
 
