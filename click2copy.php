@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
 remove_filter('the_content', 'wpautop');
 
-wp_register_script( 'clipboardjs', 'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js' , array() , '1.7', 'all' );
+wp_register_script( 'clipboardjs', 'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js' , array() , '1.7.1', 'all' );
 wp_enqueue_script('clipboardjs');
 wp_register_script('copyjs', plugins_url('/js/copy.js', __FILE__), false, '1.0', 'all');
 wp_enqueue_script( 'copyjs');
