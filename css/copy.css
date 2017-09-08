@@ -1,9 +1,8 @@
-/* to include fallback styles */
+/* to fallback styles */
 
 pre{
-  counter-reset:line-numbering !important;
   background:#2c3e50 !important;
-  padding:12px 0px 14px 0 !important;
+  padding:12px !important;
   width:100% !important;
   color:#ecf0f1 !important;
   white-space: pre-wrap;       /* Since CSS 2.1 */
@@ -11,16 +10,4 @@ pre{
   white-space: -pre-wrap;      /* Opera 4-6 */
   white-space: -o-pre-wrap;    /* Opera 7 */
   word-wrap: break-word;       /* Internet Explorer 5.5+ */
-  line-height:140% !important; 
-    .line::before {
-      content: counter(line-numbering) !important;
-      counter-increment: line-numbering !important;
-      padding-right: 1em !important;
-      /* space after numbers */
-      padding-left:8px !important;
-      width: 1.5em !important;
-      text-align: right !important;
-      opacity: 0.5 !important;
-      color:white; !important;
-  }
 }
