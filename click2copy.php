@@ -22,7 +22,46 @@ wp_enqueue_script( 'copyjs');
 wp_register_style('click2copy', plugins_url('/css/copy.css', __FILE__), false, '1.0', 'all');
 wp_enqueue_style( 'click2copy');
 
-
+/** Add the admin menu help / instruction page right below pages menu item, using a function */
+add_action( 'admin_menu', 'my_plugin_menu' );
+/** Function to display help page  */
+function my_plugin_menu() {
+	add_menu_page( 'Click2Copy Options', 'Click2Copy Help', 'manage_options', 'click2copy', 'my_plugin_options', 'dashicons-screenoptions', '12' );
+}
+/** The page to add instructions on using */
+function my_plugin_options() {
+	if ( !current_user_can( 'manage_options' ) )  {
+		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
+	}
+	echo '<div class="wrap">';
+	echo '<h2>Click2Copy Instructions</h2>';
+	echo'<p><h2>Usage</h2><p>The shortcode can be applied in either the Page or Post Editor using the following syntax: [c2c id="" pclass="" button-text="Text"]content[/c2c]</p>
+	<p>The options are as follows
+    <ul>
+    <li><b>id:</b> This identifies the code being copied, and only needs to be used if you have more than one instance on the page/post</li> 
+    <li><b>pclass:</b> This applies a custom class to the &lt;pre&gt; HTML tag for styling purposes</li> 
+    <li><b>bclass:</b> This applies a custom CSS class to the &lt;button&gt; HTML tag for styling purposes</li> 
+    <li><b>button-text:</b> This allows you to set the button text</li> 
+    </ul></p>
+    <h2>Example Use</h2>
+    <p>
+    [c2c id=&quot;code1&quot; pclass=&quot;pre2&quot; bclass=&quot;btn&quot; button-text=&quot;Copy&quot;]<br/>
+    &lt;html&gt;&lt;/html&gt; <br/>
+    &lt;?php ?&gt; <br/>
+    .css { display:code; }<br/>
+    [/c2c]<br/>
+    </p>
+    <h2>Built With</h2>
+    <ul>
+    <li>clipboard.js - The Javascript Library</li>
+    <li>PHP - The Language</li>
+    <li>WordPress - The CMS</li>
+    <li>HarryJ.us - The Person</li>
+    <li><a href="#" target="_blank">Click2Copy</a> - The Project</li>
+    </ul>
+    </p>';
+	echo '</div>';
+}
 
 add_filter( 'no_texturize_shortcodes', 'shortcodes_to_exempt_from_wptexturize' );
 function shortcodes_to_exempt_from_wptexturize( $shortcodes ) {
