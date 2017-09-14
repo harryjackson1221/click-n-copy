@@ -1,10 +1,10 @@
 <?php
    /*
    Plugin Name: Click2Copy
-   Plugin URI: https://github.com/harryjackson1221/click-n-copy
-   Description: A plugin to rule them all and add clipboard.js to WordPress
-   Version: 0.1
-   Author: Harry Jackson
+   Plugin URI: https://github.com/harryjackson1221/click2copy
+   Description: A plugin to add clipboard.js functionality to WordPress with a shortcode
+   Version: 0.9
+   Author: Harry Jackson (BoldGrid)
    Author URI: http://harryj.us
    License: GPL2
    */
