@@ -2,7 +2,7 @@
 Basic [WordPress](https://wordpress.org/) [Shortcode](https://codex.wordpress.org/Shortcode) [Plugin](https://codex.wordpress.org/Plugins) to use [clipboard.js](https://clipboardjs.com) for copying content, such as HTML and CSS code snippets with the click of a button. 
 
 ## Screenshot
-![ScreenShot](/screenshot.png?raw=true "ScreenShot")
+![ScreenShot](http://harryj.us/img/screenshot.png "ScreenShot")
 
 ## Prerequisites
 
