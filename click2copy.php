@@ -81,32 +81,7 @@ function c2c_plugin_options() {
         <li><b>bclass:</b> This applies a custom CSS class to the &lt;button&gt; HTML tag for styling purposes</li> 
         <li><b>button-text:</b> This allows you to set the button text</li> 
         </ul></p>';
-?>
-        <h2>Custom CSS (Global)</h2>
-            <form method="post" action="options.php">
-                <?php settings_fields( 'c2c-button-class' ); ?>
-                <?php do_settings_sections( 'c2c-button-class' ); ?>
-                <table class="form-table">
-                    <tr valign="top">
-                        <th scope="row">Button Class:</th>
-                            <td><input type="text" name="c2c-button-class" value="<?php echo get_option( 'c2c-button-class' ); ?>"/></td>
-                            
-                    </tr>
-                    <tr valign="top">
-                        <th scope="row">CodeBox Class:</th>
-                            <td><input type="text" name="c2c-button-class" value="<?php echo get_option( 'c2c-button-class' ); ?>"/></td>
-                            
-                    </tr>
-                    <tr valign="top">
-                        <th scope="row">Button Text:</th>
-                            <td><input type="text" name="c2c-button-class" value="<?php echo get_option( 'c2c-button-class' ); ?>"/></td>
-                            
-                    </tr>
-                </table>
-                    <?php submit_button(); ?>
-            </form>
 
-<?php
     echo '<h2>Example Use</h2>
         <p>[c2c id=&quot;code1&quot; pclass=&quot;pre2&quot; bclass=&quot;btn&quot; button-text=&quot;Copy&quot;]<br/>
         &lt;html&gt;&lt;/html&gt; <br/>
