@@ -20,21 +20,19 @@ Activate the plugin
 
 ## Once Activated
 
-1. Visit the 'Settings > click2copy' page, set your preferred CSS Classes for the pre and button class, type your preferred Button Text, and save the settings.
-2. Insert your code with the surrounding tags in any page/post[c2c id="code1"]content[/c2c]
+1. Visit the 'Settings > click2copy' page, set your preferred CSS Classes for the pre and button class, and your preferred Button Text, then save the settings.
+2. Insert your code content with the opening and closing tags in any Page or Post: [c2c id="code1"]content[/c2c]
 
 **Options:**
-* **pclass:** This applies a custom class to the ```<pre>``` HTML tag for styling purposes
-* **bclass:** This applies a custom CSS class to the ```<button>``` HTML tag for styling purposes
-* **button-text:** This allows you to set the button text
+* **pclass:** This applies a custom class to the &lt;pre&gt; HTML tag for styling purposes (default: c2cpre)
+* **bclass:** This applies a custom CSS class to the &lt;button&gt; HTML tag for styling purposes (default: button-c2c)
+* **button-text:** This allows you to set the button text label (default: Copy)
 
 ## Usage
-The shortcode can be applied in either the Page or Post Editor using the following syntax: [c2c]content[/c2c]
-
-The shortcode can be applied in either the Page or Post Editor using the following syntax: [c2c id="uniqueID"]content[/c2c]. It is packaged with support for shortcode tag [c2c] which automatically converts all special characters to HTML entities.
+The shortcode can be applied multiple times in either the Page or Post Editor using the following syntax: [c2c id="uniqueID"]content[/c2c]. 
 
 **Attributes:**
-* id: This identifies the code being copied, and needs to be unique for each code snippet if you have more than one instance on the page/post
+* id: This identifies the code being copied, and needs to be unique for each code snippet if you have more than one instance on the Page or Post. 
 
 ### *Example Use*
 ```
