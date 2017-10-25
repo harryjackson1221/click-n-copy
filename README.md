@@ -29,7 +29,8 @@ Activate the plugin
 * **button-text:** This allows you to set the button text label (default: Copy)
 
 ## Usage
-The shortcode can be applied multiple times in either the Page or Post Editor using the following syntax: [c2c id="uniqueID"]content[/c2c]. 
+The shortcode can be applied multiple times in either the Page or Post Editor using the following syntax: 
+[c2c id="uniqueID"]content[/c2c]. 
 
 **Attributes:**
 * id: This identifies the code being copied, and needs to be unique for each code snippet if you have more than one instance on the Page or Post. 
