@@ -6,14 +6,11 @@ Tested up to: 4.9
 Stable tag: 1.0
 License: GPLv2 or later
 
-click2copy is a WordPress shortcode plugin that uses [clipboard.js](https://clipboardjs.com/) for displaying and copying content to your clipboard. click2copy can be used for copying HTML, PHP, JavaScript, CSS or any other programming language code snippets to your clipboard with the click of a button. 
+click2copy is a WordPress shortcode plugin that uses clipboard.js for copying HTML, PHP, JavaScript, CSS or any other programming language code snippets to your clipboard with the click of a button. 
 
 == Description ==
 
 The shortcode can be applied in either the Page or Post Editor using the following syntax: [c2c id="uniqueID"]content[/c2c]. It is packaged with support for shortcode tag [c2c] which automatically converts all special characters to HTML entities.
-
-**Attributes:**
-* id: This identifies the code being copied, and needs to be unique for each code snippet if you have more than one instance on the page/post
 
 == Installation ==
 
@@ -38,6 +35,9 @@ The shortcode can be applied in either the Page or Post Editor using the followi
 * pclass: This applies a custom class to the <pre> HTML tag for styling purposes
 * bclass: This applies a custom CSS class to the <button> HTML tag for styling purposes
 * button-text: This allows you to set the button text
+
+**Shortcode Attributes:**
+* id: This identifies the relationship between the code being copied and the button that triggers the event. The id needs to be unique for each code snippet if you have more than one instance on the Page or Post.
 
 = Example Usage =
 [c2c id="code1"]
