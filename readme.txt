@@ -6,7 +6,7 @@ Tested up to: 4.9
 Stable tag: 1.0
 License: GPLv2 or later
 
-click2copy is a WordPress shortcode plugin that uses [clipboard.js](https://clipboardjs.com/) for displaying and copying content to your clipboard, which can be used for HTML, PHP, JavaScript and CSS code snippets with the click of a button. 
+click2copy is a WordPress shortcode plugin that uses [clipboard.js](https://clipboardjs.com/) for displaying and copying content to your clipboard. click2copy can be used for copying HTML, PHP, JavaScript, CSS or any other programming language code snippets to your clipboard with the click of a button. 
 
 == Description ==
 
@@ -14,7 +14,6 @@ The shortcode can be applied in either the Page or Post Editor using the followi
 
 **Attributes:**
 * id: This identifies the code being copied, and needs to be unique for each code snippet if you have more than one instance on the page/post
-
 
 == Installation ==
 
@@ -33,17 +32,29 @@ The shortcode can be applied in either the Page or Post Editor using the followi
 = Once Activated =
 
 1. Visit the 'Settings > click2copy' page, set your preferred CSS Classes for the pre and button class, type your preferred Button Text, and save the settings.
-2. Insert your code with the surrounding tags in any page/post[c2c id="code1"]content[/c2c]
+2. Insert your code with the following shortcode tags in any page/post[c2c id="code1"]content[/c2c]
 
 **Options:**
 * pclass: This applies a custom class to the <pre> HTML tag for styling purposes
 * bclass: This applies a custom CSS class to the <button> HTML tag for styling purposes
 * button-text: This allows you to set the button text
 
+= Example Usage =
+[c2c id="code1"]
+<div class="row">
+<div class="col-md-9 col-xs-12 col-sm-12">
+<div class="mod-blockquote">
+A blockquote highlights &quot; important information, " which may or may not be an actual quote.
+</div>
+</div>
+</div>
+[/c2c]
+
 == Changelog ==
 
 = 1.0 =
 *Release Date - TBD (Soon)*
+
 * Added constants for options with defaults if not set
 * Added styling for default options
 * 
