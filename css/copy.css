@@ -18,7 +18,7 @@ pre.c2cpre {
 	float:right;
 	font-size: 20px;
 	border-radius: 0;
-	margin: -13px 0;
+	margin: -13px 0 20px 0;
 	padding: 10px 25px;
 	text-transform: none;
 	transition: all 1s ease .5s;
@@ -36,5 +36,6 @@ pre.c2cpre {
 	background: linear-gradient(#2c3e50, #666666); 
 	background-color: #000000;
 	transition: all .5s ease 0s;
+	padding: 10px 28px;
 
 }
