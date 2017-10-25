@@ -1,9 +1,40 @@
 /* to include fallback styles for the codeblock */
 
 pre.c2cpre {
-  background:#2c3e50;
-  color: #ecf0f1;
-  padding:12px;
-  width:100%;
-  word-break:keep-all;
+	background: #2c3e50;
+	border: 3px solid #effce5;
+	border-radius: 0;
+	color: #ecf0f1;
+	padding: 12px;
+	width: 100%;
+	word-break: break-all;
+}
+
+.button-c2c {
+	background-color: #2c3e50;
+	border: 3px solid #effce5;
+	color: #effce5;
+	display: inline;
+	float:right;
+	font-size: 20px;
+	border-radius: 0;
+	margin: -13px 0;
+	padding: 10px 25px;
+	text-transform: none;
+	transition: all 1s ease .5s;
+}
+
+.button-c2c:hover {
+ 	background: linear-gradient(#2c3e50, #333333); 
+ 	background-color: #000000;
+ 	transition: all 1s ease .5s;
+
+
+}
+
+.button-c2c:active {
+	background: linear-gradient(#2c3e50, #666666); 
+	background-color: #000000;
+	transition: all .5s ease 0s;
+
 }
