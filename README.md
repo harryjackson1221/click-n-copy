@@ -24,8 +24,8 @@ Activate the plugin
 2. Insert your code with the surrounding tags in any page/post[c2c id="code1"]content[/c2c]
 
 **Options:**
-* **pclass:** This applies a custom class to the <pre> HTML tag for styling purposes
-* **bclass:** This applies a custom CSS class to the <button> HTML tag for styling purposes
+* **pclass:** This applies a custom class to the ```<pre>``` HTML tag for styling purposes
+* **bclass:** This applies a custom CSS class to the ```<button>``` HTML tag for styling purposes
 * **button-text:** This allows you to set the button text
 
 ## Usage
