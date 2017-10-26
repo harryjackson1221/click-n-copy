@@ -171,10 +171,10 @@ function click2copy($atts, $content) {
     if ( empty($c2c_pre) ) $c2c_pre = 'c2cpre';
 
     $c2c_button = $c2c_options['c2c__text_field_1'];
-    if ( empty($c2c_button) ) $c2c_button = 'button-primary';
+    if ( empty($c2c_button) ) $c2c_button = 'button-c2c';
 
     $c2c_btn_text = $c2c_options['c2c__text_field_2'];
-    if ( empty($c2c_btn_text) ) $c2c_btn_text = 'Click';
+    if ( empty($c2c_btn_text) ) $c2c_btn_text = 'Copy';
 
     $escaped_copytext = htmlspecialchars( "$content" );
 

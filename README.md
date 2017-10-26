@@ -2,7 +2,6 @@
 
 click2copy is a [WordPress](https://wordpress.org/) [shortcode](https://codex.wordpress.org/Shortcode) [plugin](https://codex.wordpress.org/Plugins) that uses [clipboard.js](https://clipboardjs.com/) for copying HTML, PHP, JavaScript, CSS or any other programming language code snippets to your clipboard with the click of a button. 
 
-## Screenshot
 ![ScreenShot](http://harryj.us/c2c.jpg "ScreenShot")
 
 ## Prerequisites
