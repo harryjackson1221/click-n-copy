@@ -174,12 +174,13 @@ function click2copy($atts, $content) {
     if ( empty($c2c_button) ) $c2c_button = 'button-c2c';
 
     $c2c_btn_text = $c2c_options['c2c__text_field_2'];
-    if ( empty($c2c_btn_text) ) $c2c_btn_text = 'Copy';
+    if ( empty($c2c_btn_text) ) $c2c_btn_text = '<img src="' . plugins_url( 'images/logo-small.png', __FILE__ ) . '" width="23px">';
 
     $escaped_copytext = htmlspecialchars( "$content" );
+    
 
 // Return the stuff
-    return '<pre id="' . $atts['id'] . '" class="' . $c2c_pre . '">' . $escaped_copytext . '</pre><button data-toggle="tooltip" class="' . $c2c_button . '" data-clipboard-target="pre#' . $atts['id'] . '">' . $c2c_btn_text . '</button>';
+    return '<div class="c2c-wrapper"><pre id="' . $atts['id'] . '" class="' . $c2c_pre . '">' . $escaped_copytext . '</pre><button data-toggle="tooltip" class="' . $c2c_button . '" data-clipboard-target="pre#' . $atts['id'] . '">' . $c2c_btn_text . '</button></div>';
 }
 
 ?>
