@@ -153,18 +153,31 @@ function shortcodes_to_exempt_from_wptexturize( $shortcodes ) {
 }
 
 //autop adds some line breaks so remove it, add it back with a higher priority 
-remove_filter('the_content', 'wpautop');
-add_filter('the_content', 'wpautop','99');
+remove_filter( 'the_content', 'wpautop' );
+add_filter( 'the_content', 'wpautop' , 99);
+add_filter( 'the_content', 'shortcode_unautop',100 );
+//add_filter('the_content', 'wpautop','99');
 
 // add a shortcode to echo and copy the content tag in a shortcode
 add_shortcode('c2c', 'click2copy');
 
+
+function copter_remove_crappy_markup( $string )
+{
+    $patterns = array(
+        '#^\s*</p>#',
+        '#<p>\s*$#',
+        '/<br \/>/iU'
+    );
+    return preg_replace($patterns, '', $string);
+}
 // set the function for the shortcode
 function click2copy($atts, $content) {
 // Create default options for the array, in case someone doesnt set an option
 
 
     $c2c_options = get_option('c2c__settings');
+
 
     //set constants for options, and defaults for empty fields
     $c2c_pre = $c2c_options['c2c__text_field_0'];
@@ -175,11 +188,16 @@ function click2copy($atts, $content) {
 
     $c2c_btn_text = $c2c_options['c2c__text_field_2'];
     if ( empty($c2c_btn_text) ) $c2c_btn_text = '<img src="' . plugins_url( 'images/logo-small.png', __FILE__ ) . '" width="23px">';
-
-    $escaped_copytext = htmlspecialchars( "$content" );
+    $clean = copter_remove_crappy_markup( $content );
+    $escaped_copytext = htmlspecialchars( "$clean" );
     
 
-// Return the stuff
+// Testing stuffs
+// echo '<pre>';
+//    var_dump( $content );
+// echo '</pre>';
+
+// Return the content    
     return '<div class="c2c-wrapper"><pre id="' . $atts['id'] . '" class="' . $c2c_pre . '">' . $escaped_copytext . '</pre><button data-toggle="tooltip" class="' . $c2c_button . '" data-clipboard-target="pre#' . $atts['id'] . '">' . $c2c_btn_text . '</button></div>';
 }
 
