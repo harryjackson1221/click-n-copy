@@ -162,8 +162,7 @@ add_filter( 'the_content', 'shortcode_unautop',100 );
 add_shortcode('c2c', 'click2copy');
 
 
-function copter_remove_crappy_markup( $string )
-{
+function c2c_remove_added_markup( $string ) {
     $patterns = array(
         '#^\s*</p>#',
         '#<p>\s*$#',
@@ -188,9 +187,8 @@ function click2copy($atts, $content) {
 
     $c2c_btn_text = $c2c_options['c2c__text_field_2'];
     if ( empty($c2c_btn_text) ) $c2c_btn_text = '<img src="' . plugins_url( 'images/logo-small.png', __FILE__ ) . '" width="23px">';
-    $clean = copter_remove_crappy_markup( $content );
-    $escaped_copytext = htmlspecialchars( "$clean" );
-    
+    $content = c2c_remove_added_markup( $content );
+    $escaped_copytext = htmlspecialchars( "$content" );
 
 // Testing stuffs
 // echo '<pre>';
