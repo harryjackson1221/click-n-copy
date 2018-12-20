@@ -28,7 +28,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 // Protections
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
-//add the scripts and fallback styles for pre box and button
+//add the scripts and fallback styles for pre box and button - test
 wp_register_script( 'clipboardjs', 'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js' , array() , '1.7', 'all' );
 wp_enqueue_script('clipboardjs');
 
